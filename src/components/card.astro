@@ -3,18 +3,29 @@ const { navn, email, rolle, billede } = Astro.props;
 ---
 
 <article>
-  <img src={`images/${billede}`} alt={navn} />
+  <img src={billede} alt={navn} />
   <h3>{navn}</h3>
   <p>{email}</p>
   <p>{rolle}</p>
 </article>
 
 <style>
+  h1,
+  h2,
+  h3,
+  p {
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
   article {
-    background-color: antiquewhite;
+    background: linear-gradient(135deg, #3a29d4, #05033e);
     padding: 1rem;
   }
   img {
     max-width: 100%;
+    border-radius: 100%;
+    border-width: 3px;
+    border-color: white;
   }
 </style>
