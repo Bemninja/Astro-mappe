@@ -1,14 +1,22 @@
 ---
-const { navn, email, rolle, billede, aktiv } = Astro.props;
+const { navn, email, rolle, billede, aktiv, type } = Astro.props;
 ---
 
-<article>
+<article class={type}>
   <img src={billede} alt={navn} />
   <h3>{navn}</h3>
   <p>{email}</p>
   <p>{rolle}</p>
   {aktiv && <p class="aktiv">ON SALE</p>}
 </article>
+
+<!-- <article class="square">
+  <img src={billede} alt={navn} />
+  <h3>{navn}</h3>
+  <p>{email}</p>
+  <p>{rolle}</p>
+  {aktiv && <img src="../images/Spotify_Primary_Logo_RGB_Green.png" />}
+</article> -->
 
 <style>
   h1,
@@ -24,12 +32,21 @@ const { navn, email, rolle, billede, aktiv } = Astro.props;
     background: linear-gradient(135deg, #3a29d4, #05033e);
     padding: 1rem;
   }
-  img {
+  .round img {
     max-width: 100%;
     border-radius: 100%;
     border-width: 3px;
     border-color: white;
+    object-fit: contain;
   }
+
+  .square img {
+    max-width: 100%;
+    border-width: 3px;
+    border-color: white;
+    object-fit: contain;
+  }
+
   .aktiv {
     position: absolute;
     top: 0.3%;

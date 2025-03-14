@@ -1,5 +1,6 @@
 ---
-import Card from "../components/card.astro";
+import MainHeader from "../components/Header.astro";
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,34 +8,58 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+  <MainHeader />
   <main>
-    <h1>Bonjour tout le monde</h1>
+    <h1>Bonjour tout le monde! Voici le Spotify!</h1>
     <h2>Orkestre</h2>
     <section class="medlemsliste">
-      <Card navn="Miley" email="Bangerz" rolle="Artist" billede="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill" aktiv />
-      <Card navn="Jonas1" email="joha@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill" />
-      <Card navn="Peter1" email="peuj@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" />
-      <Card navn="Keld2" email="kemm@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill" />
-      <Card navn="Jonas2" email="joha@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=5&q=95&w=360&h=360&fit=fill" />
-      <Card navn="Peter2" email="peuj@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=6&q=95&w=360&h=360&fit=fill" />
-      <Card navn="Keld3" email="kemm@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=7&q=95&w=360&h=360&fit=fill" />
-      <Card navn="Jonas3" email="joha@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=8&q=95&w=360&h=360&fit=fill" />
-      <Card navn="Peter3" email="peuj@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill" />
+      <Card navn="Miley" email="Bangerz" rolle="Artist" billede="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill" aktiv type="round" />
+      <Card navn="Eve Parody" email="joha@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill" type="round" />
+      <Card navn="McCartney & Riannah" email="peuj@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" type="round" />
+      <Card navn="Swagga" email="kemm@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill" type="round" />
+      <Card navn="Alan J." email="joha@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=5&q=95&w=360&h=360&fit=fill" type="round" />
+      <Card navn="Michael J." email="peuj@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=6&q=95&w=360&h=360&fit=fill" type="round" />
+      <Card navn="Les 3 Parapluis" email="kemm@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=7&q=95&w=360&h=360&fit=fill" type="round" />
+      <Card navn="Lil Wayne" email="joha@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=8&q=95&w=360&h=360&fit=fill" type="round" />
+      <Card navn="Black Eyed Peas" email="peuj@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill" type="round" />
+    </section>
+
+    <section class="medlemsliste">
+      <Card navn="Miley" email="Bangerz" rolle="Artist" billede="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill" aktiv type="square" />
+      <Card navn="Eve Parody" email="joha@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill" type="square" />
+      <Card navn="McCartney & Riannah" email="peuj@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" type="square" />
+      <Card navn="Swagga" email="kemm@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill" type="square" />
+      <Card navn="Alan J." email="joha@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=5&q=95&w=360&h=360&fit=fill" type="square" />
+      <Card navn="Michael J." email="peuj@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=6&q=95&w=360&h=360&fit=fill" type="square" />
+      <Card navn="Les 3 Parapluis" email="kemm@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=7&q=95&w=360&h=360&fit=fill" type="square" />
+      <Card navn="Lil Wayne" email="joha@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=8&q=95&w=360&h=360&fit=fill" type="square" />
+      <Card navn="Black Eyed Peas" email="peuj@kea.dk" rolle="Artist" billede="https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill" type="square" />
     </section>
   </main>
 </Layout>
 
 <style>
   body {
-    background: linear-gradient(135deg, #3a29d4, #05033e);
+    background: linear-gradient(135deg, #252431, #01000f);
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
   main {
-    margin: auto;
-    max-width: 1000px;
+    margin: 2rem;
+    max-width: 1500px;
+  }
+
+  section {
+    margin-bottom: 2rem;
   }
   .medlemsliste {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
   }
 </style>

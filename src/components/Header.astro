@@ -1,0 +1,45 @@
+<header>
+  <div class="left">
+    <img src="../images/Spotify_Primary_Logo_RGB_Green.png" alt="" />
+    <div class="search-container">
+      <input type="text" class="search" placeholder="Hvad vil du afspille?" />
+    </div>
+  </div>
+
+  <div class="right">
+    <img src="../images/Spotify_Primary_Logo_RGB_Green.png" alt="" />
+    <div class="search-container">
+      <input type="text" class="search" placeholder="Hvad vil du afspille?" />
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    height: 60px;
+    display: flex;
+    margin: 0.5rem 2rem;
+  }
+  .left,
+  .right {
+    display: flex;
+    gap: 1rem;
+  }
+  .right {
+    justify-content: flex-end;
+  }
+  img {
+    max-height: 80%;
+  }
+  .search {
+    /* flex: 1; */
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 30);
+    color: white;
+    font-size: 1rem;
+  }
+</style>
