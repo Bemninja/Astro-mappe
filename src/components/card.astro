@@ -1,5 +1,5 @@
 ---
-const { navn, email, rolle, billede } = Astro.props;
+const { navn, email, rolle, billede, aktiv } = Astro.props;
 ---
 
 <article>
@@ -7,6 +7,7 @@ const { navn, email, rolle, billede } = Astro.props;
   <h3>{navn}</h3>
   <p>{email}</p>
   <p>{rolle}</p>
+  {aktiv && <p class="aktiv">ON SALE</p>}
 </article>
 
 <style>
@@ -19,6 +20,7 @@ const { navn, email, rolle, billede } = Astro.props;
   }
 
   article {
+    position: relative;
     background: linear-gradient(135deg, #3a29d4, #05033e);
     padding: 1rem;
   }
@@ -27,5 +29,15 @@ const { navn, email, rolle, billede } = Astro.props;
     border-radius: 100%;
     border-width: 3px;
     border-color: white;
+  }
+  .aktiv {
+    position: absolute;
+    top: 0.3%;
+    right: 0.3%;
+    rotate: 5deg;
+    background: linear-gradient(135deg, #f7df02, #e30606);
+    margin: 1rem;
+    padding: 5px;
+    color: white;
   }
 </style>
